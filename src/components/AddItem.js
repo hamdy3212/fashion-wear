@@ -22,7 +22,7 @@ const AddItem = () => {
     console.log(item);
     e.preventDefault();
     axios
-      .post("wear-fashion.herokuapp.com/items/add", item)
+      .post("/items/add", item)
       .then(function (response) {
         console.log(response);
       })

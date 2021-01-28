@@ -20,7 +20,7 @@ const AddUser = ({ users, setUsers }) => {
     } else {
       setUsers([...users, user]);
       axios
-        .post("wear-fashion.herokuapp.com/users/add", user)
+        .post("/users/add", user)
         .then(function (response) {
           console.log(response);
         })
