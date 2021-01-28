@@ -72,7 +72,9 @@ const CategoryProducts = () => {
               {items
                 .filter((item) => (item.category === id ? item : null))
                 .filter((item) => {
-                  if (item.type == type) return item;
+                  if (item.type === type) {
+                    return item;
+                  } else return null;
                 })
                 .slice(0, 6)
                 .map((item) => {

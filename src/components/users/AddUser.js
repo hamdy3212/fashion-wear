@@ -20,7 +20,7 @@ const AddUser = ({ users, setUsers }) => {
     } else {
       setUsers([...users, user]);
       axios
-        .post("http://localhost:5000/users/add", user)
+        .post("https://fashion-wear.netlify.app/users/add", user)
         .then(function (response) {
           console.log(response);
         })

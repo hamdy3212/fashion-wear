@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
@@ -11,7 +10,7 @@ const Users = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users")
+      .get("https://fashion-wear.netlify.app/users")
       .then((response) => {
         if (response.data.length > 0) {
           setUsers(response.data);
@@ -24,9 +23,9 @@ const Users = () => {
   }, []);
   const deleteUser = (id) => {
     axios
-      .delete("http://localhost:5000/users/" + id)
+      .delete("https://fashion-wear.netlify.app/users/" + id)
       .then((response) => console.log(response.data));
-    setUsers(users.filter((user) => user._id != id));
+    setUsers(users.filter((user) => user._id !== id));
   };
   if (loading) {
     return <h1>Loading...</h1>;
