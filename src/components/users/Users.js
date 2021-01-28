@@ -10,7 +10,7 @@ const Users = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
-      .get("/users")
+      .get("https://wear-fashion.herokuapp.com/users")
       .then((response) => {
         if (response.data.length > 0) {
           setUsers(response.data);
@@ -22,7 +22,9 @@ const Users = () => {
       });
   }, []);
   const deleteUser = (id) => {
-    axios.delete("/users/" + id).then((response) => console.log(response.data));
+    axios
+      .delete("https://wear-fashion.herokuapp.com/users/" + id)
+      .then((response) => console.log(response.data));
     setUsers(users.filter((user) => user._id !== id));
   };
   if (loading) {

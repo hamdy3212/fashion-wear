@@ -16,7 +16,7 @@ const CategoryProducts = () => {
   const [loading, setLoading] = useState([true]);
   useEffect(() => {
     axios
-      .get("/items")
+      .get("https://wear-fashion.herokuapp.com/items")
       .then((response) => {
         if (response.data.length > 0) {
           setItems(response.data);
