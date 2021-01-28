@@ -22,7 +22,7 @@ const AddItem = () => {
     console.log(item);
     e.preventDefault();
     axios
-      .post("https://fashion-wear.netlify.app/items/add", item)
+      .post("https://wear-fashion.herokuapp.com/items/add", item)
       .then(function (response) {
         console.log(response);
       })
