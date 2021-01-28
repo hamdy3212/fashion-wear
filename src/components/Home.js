@@ -24,7 +24,7 @@ const Fasion = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/items")
+      .get("https://fashion-wear.netlify.app/items")
       .then((response) => {
         if (response.data.length > 0) {
           setItems(response.data);
