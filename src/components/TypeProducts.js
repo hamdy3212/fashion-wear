@@ -13,7 +13,7 @@ const TypeProducts = () => {
   const [loading, setLoading] = useState([true]);
   useEffect(() => {
     axios
-      .get("https://wear-fashion.herokuapp.com/items")
+      .get("wear-fashion.herokuapp.com/items")
       .then((response) => {
         if (response.data.length > 0) {
           setItems(response.data);
