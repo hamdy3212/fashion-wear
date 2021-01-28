@@ -41,6 +41,9 @@ const CategoryProducts = () => {
     "Socks",
     "Shoes",
   ];
+  if (loading) {
+    return <h1>loading...</h1>;
+  }
   return (
     <Container>
       <Breadcrumb>
@@ -54,9 +57,9 @@ const CategoryProducts = () => {
           src="https://www.bannedalt.com/pub/media/catalog/category/sale-alt.jpg"
         />
       </Card>
-      {id == "Kids" ? <Kids /> : null}
-      {id == "Men" ? <Men /> : null}
-      {id == "Women" ? <Women /> : null}
+      {id === "Kids" ? <Kids /> : null}
+      {id === "Men" ? <Men /> : null}
+      {id === "Women" ? <Women /> : null}
 
       {types.map((type) => {
         return (
@@ -67,7 +70,7 @@ const CategoryProducts = () => {
             </div>
             <Row className="justify-content-md-center displayed-items-row">
               {items
-                .filter((item) => (item.category == id ? item : null))
+                .filter((item) => (item.category === id ? item : null))
                 .filter((item) => {
                   if (item.type == type) return item;
                 })

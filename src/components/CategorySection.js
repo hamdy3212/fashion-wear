@@ -16,7 +16,7 @@ const CategorySection = ({ items, categories }) => {
             </div>
             <Row className="justify-content-md-center displayed-items-row">
               {items
-                .filter((item) => (item.category == category ? item : null))
+                .filter((item) => (item.category === category ? item : null))
                 .slice(0, 6)
                 .map((item) => {
                   return (

@@ -38,8 +38,8 @@ const TypeProducts = () => {
       <Card className="section mb-5">
         <Row className="justify-content-md-center displayed-items-row">
           {items
-            .filter((item) => item.category == id)
-            .filter((item) => item.type == cat)
+            .filter((item) => item.category === id)
+            .filter((item) => item.type === cat)
             .map((item) => {
               return (
                 <Col lg={2} md={3} xs={6} className="item" key={item._id}>
