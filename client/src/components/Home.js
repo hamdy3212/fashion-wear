@@ -24,7 +24,7 @@ const Fasion = () => {
 
   useEffect(() => {
     axios
-      .get("https://wear-fashion.herokuapp.com/items")
+      .get("http://localhost:5000/items")
       .then((response) => {
         if (response.data.length > 0) {
           setItems(response.data);
