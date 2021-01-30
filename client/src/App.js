@@ -14,9 +14,9 @@ function App() {
       <NavBar />
       <br />
       <Switch>
-        {/* <Route exact path="/">
+        <Route exact path="/">
           <Home />
-        </Route> */}
+        </Route>
         <Route path="/items/add">
           <AddItem />
         </Route>
